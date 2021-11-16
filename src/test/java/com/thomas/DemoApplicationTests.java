@@ -13,8 +13,8 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 class DemoApplicationTests {
 
   @Container
-  public static PostgreSQLContainer container = new PostgreSQLContainer()
-    .withUsername("duke")
+  public static PostgreSQLContainer container = new PostgreSQLContainer("postgres:alpine")
+    .withUsername("thomas")
     .withPassword("password")
     .withDatabaseName("test");
 
